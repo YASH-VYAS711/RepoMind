@@ -200,6 +200,9 @@ def retrieve_chunks(query: str, repo_id: str, k: int = None, mode: str = "normal
         print(f"[INFO] File-specific query detected: {filename}")
 
         vector_store = get_vector_store(repo_id)
+        data = vector_store.get()
+
+        print(set([m["file_name"] for m in data["metadatas"]]))
 
         all_docs = vector_store.get(
             where={

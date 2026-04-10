@@ -7,6 +7,8 @@ from config import REPOS_DIR
 def generate_repo_id(repo_url: str) -> str:
     return hashlib.md5(repo_url.encode()).hexdigest()
 
+def normalize_url(url: str):
+    return url.strip().lower().replace(".git", "").rstrip("/")
 
 def get_repo_path(repo_id: str) -> Path:
     return REPOS_DIR / repo_id
@@ -15,7 +17,7 @@ def get_repo_path(repo_id: str) -> Path:
 def clone_repo(repo_url: str) -> Path:
     if not repo_url.startswith("http"):
         raise ValueError("Invalid repository URL")
-    repo_id = generate_repo_id(repo_url)
+    repo_id = generate_repo_id(normalize_url(repo_url))
 
     repo_path = get_repo_path(repo_id)
 

@@ -263,14 +263,13 @@ def ask_question(question: str, repo_id: str) -> str:
     if not chunks:
         yield "No relevant information found in this repository."
         return
-    # ─── Step 3: Build context ────────────────────────────
+    # ─── Step 3: Build context ──────────────
     context = build_context(chunks, repo_id) 
     print(f"[INFO] Context length: {len(context)} chars")
     prompt = build_prompt(question, context, mode)
 
     # ─── Step 5: Stream LLM response ─────────────────────
     t7 = time.time()
-
     try:
         for token in call_ollama(prompt):
             yield token  # live stream in terminal
