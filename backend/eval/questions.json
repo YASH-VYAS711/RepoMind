@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Give an overview of this project",
+    "expected_files": ["readme", "src"]
+  },
+  {
+    "question": "Where are API calls handled?",
+    "expected_files": ["api", "agent"]
+  },
+  {
+    "question": "How is state managed?",
+    "expected_files": ["store", "context", "reducer"]
+  },
+  {
+    "question": "Where are UI components defined?",
+    "expected_files": ["components"]
+  },
+  {
+    "question": "How does authentication work?",
+    "expected_files": ["auth", "token"]
+  },
+  {
+    "question": "Where are routes defined?",
+    "expected_files": ["app", "router"]
+  },
+  {
+    "question": "How are HTTP requests made?",
+    "expected_files": ["fetch", "agent"]
+  },
+  {
+    "question": "How does data flow from API to UI?",
+    "expected_files": ["component", "api"]
+  },
+  {
+    "question": "Where is global configuration stored?",
+    "expected_files": ["config", "env"]
+  },
+  {
+    "question": "Where are constants or types defined?",
+    "expected_files": ["constants"]
+  }
+]

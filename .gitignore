@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ChromaDB data (can be large)
+backend/chroma_db/
+
+# Cloned repos (temporary, can be huge)
+backend/cloned_repos/
+
+# Environment variables
+.env
+
+# HuggingFace model cache (downloaded automatically)
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Windsurf / IDE
+.windsurf/
+.vscode/
+*.log
