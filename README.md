@@ -119,15 +119,16 @@ Streaming Response (UI)
 git clone https://github.com/YASH-VYAS711/RepoMind.git
 cd RepoMind
 
-
 2. Backend setup
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+
 3. Frontend setup
 cd frontend
 npm install
 npm run dev
+
 4. Run Ollama (required)
 ollama serve
 ollama pull qwen2.5-coder:14b
